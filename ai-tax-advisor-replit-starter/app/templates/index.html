@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Tax Advisor — Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    header { display: flex; justify-content: space-between; align-items: baseline; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 1rem; margin: 1rem 0; box-shadow: 0 1px 4px rgba(0,0,0,.05); }
+    .caps { font-size: .85rem; letter-spacing: .04em; color: #666; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .recs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .pill { display: inline-block; padding: .15rem .5rem; border: 1px solid #ccc; border-radius: 999px; font-size: .8rem; }
+    .muted { color: #666; }
+    .small { font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Tax Advisor — MVP Demo</h1>
+    <div class="caps">지난 해 리턴 PDF 업로드</div>
+  </header>
+
+  <div class="card">
+    <input type="file" id="file" accept=".pdf" />
+    <button id="btn">분석 시작</button>
+    <span id="status" class="muted small"></span>
+  </div>
+
+  <div class="card">
+    <h3>감지된 서식</h3>
+    <div id="forms"></div>
+  </div>
+
+  <div class="card">
+    <h3>추천 카드</h3>
+    <div id="recs" class="recs"></div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
